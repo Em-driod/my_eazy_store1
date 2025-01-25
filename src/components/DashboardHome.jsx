@@ -31,6 +31,7 @@ const DashboardHome = () => {
   };  
 
   const barOptions = {  
+    maintainAspectRatio: false,  
     scales: {  
       y: {  
         beginAtZero: true,  
@@ -62,6 +63,7 @@ const DashboardHome = () => {
   };  
 
   const scatterOptions = {  
+    maintainAspectRatio: false,  
     scales: {  
       x: { type: 'linear', position: 'bottom' },  
       y: {},  
@@ -69,7 +71,7 @@ const DashboardHome = () => {
   };  
 
   return (  
-    <div className="p-6 bg-gray-50 min-h-screen">  
+    <div className="p-6 bg-gray-50 min-h-screen overflow-hidden">  
       <h1 className="text-3xl font-bold text-gray-800 mb-8">Dashboard Overview</h1>  
 
       {/* Top Metrics Section */}
@@ -86,16 +88,20 @@ const DashboardHome = () => {
       {/* Chart Section */}
       <div className="grid gap-8 md:grid-cols-2">
         {/* Scatter Chart Section */}
-        <div className="bg-white p-6 rounded-lg shadow-lg">
+        <div className="bg-white p-6 rounded-lg shadow-lg overflow-hidden">
           <h3 className="text-xl font-semibold mb-4 text-gray-700">Revenue Distribution</h3>
-          <Scatter data={scatterData} options={scatterOptions} />
+          <div className="relative w-full h-80">
+            <Scatter data={scatterData} options={scatterOptions} />
+          </div>
           <p className="text-gray-500 text-sm mt-4">Revenue data comparison over recent months</p>
         </div>
 
         {/* Bar Chart Section */}
-        <div className="bg-white p-6 rounded-lg shadow-lg">
+        <div className="bg-white p-6 rounded-lg shadow-lg overflow-hidden">
           <h3 className="text-xl font-semibold mb-4 text-gray-700">Top Products</h3>
-          <Bar data={barData} options={barOptions} />
+          <div className="relative w-full h-80">
+            <Bar data={barData} options={barOptions} />
+          </div>
           <p className="text-gray-500 text-sm mt-4">Insights into top-selling product categories</p>
         </div>
       </div>
@@ -104,6 +110,3 @@ const DashboardHome = () => {
 };  
 
 export default DashboardHome;
-
-
-

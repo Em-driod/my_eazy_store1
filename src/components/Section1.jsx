@@ -24,7 +24,7 @@ const Section1 = () => {
 
   return (
     <section className="flex flex-col lg:flex-row justify-center items-center px-0 relative mb-10 h-full bg-gray-100 overflow-hidden">
-      <div className="flex flex-col md:flex-row lg:flex-row items-center px-4 lg:px-[120px] pt-5 lg:pt-[100px] lg:space-y-0 lg:space-x-4 space-y-4 lg:space-y-0">
+      <div className="flex flex-col md:flex-row lg:flex-row items-center px-4 lg:px-[120px] pt-5 lg:pt-[100px] lg:space-x-4 space-y-4 lg:space-y-0">
         
         <div className="flex-1 lg:text-left text-center md:text-left">
           <motion.h1

@@ -1,4 +1,3 @@
-//Navbar.jsx
 import React from 'react';  
 import { FaQuestion } from "react-icons/fa";   
 import { FaUserCircle } from "react-icons/fa";  
@@ -7,10 +6,9 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {  
   return (  
-    <nav className="flex justify-between items-center bg-black text-white p-4">  
+    <nav className="flex justify-between items-center bg-black text-white p-4 fixed top-0 left-0 w-full z-50 shadow-md">  
       <div className="text-xl font-bold"> 
-      <Link to='/'> EAZYstoreDASHBOARD  </Link> 
-        
+        <Link to='/'>EAZYstoreDASHBOARD</Link>  
       </div>  
       <div className="flex items-center">  
         <div className="flex items-center mr-6 cursor-pointer">  
